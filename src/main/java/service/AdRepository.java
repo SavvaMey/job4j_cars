@@ -113,7 +113,7 @@ public class AdRepository {
         );
     }
 
-    public Ad UpdateForSold(Ad ad) {
+    public Ad updateForSold(Ad ad) {
         return this.tx(session -> {
                     session.update(ad);
                     return ad;
@@ -121,7 +121,7 @@ public class AdRepository {
         );
     }
 
-    public Ad CreateAd(Ad ad) {
+    public Ad createAd(Ad ad) {
         return this.tx(session -> {
                     session.save(ad);
                     return ad;

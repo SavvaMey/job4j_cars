@@ -57,7 +57,7 @@ public class IndexServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
         Ad ad = AdRepository.instOf().findAd(id);
         ad.setSold(true);
-        AdRepository.instOf().UpdateForSold(ad);
+        AdRepository.instOf().updateForSold(ad);
         resp.sendRedirect(req.getContextPath() + "/index");
     }
 }

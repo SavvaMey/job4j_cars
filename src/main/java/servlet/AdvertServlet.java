@@ -73,7 +73,7 @@ public class AdvertServlet extends HttpServlet {
                 body,
                 Double.parseDouble(map.get("price")));
         User user = (User) req.getSession().getAttribute("user");
-        AdRepository.instOf().CreateAd(
+        AdRepository.instOf().createAd(
                 Ad.of(
                 map.get("description"),
                         car,
